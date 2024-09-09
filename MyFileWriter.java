@@ -4,7 +4,8 @@ import java.io.*;
 public class MyFileWriter {
    
     public static void printFileSize (String fileName) {
-        System.out.println(fileName.length());
+        File file = new File (fileName);
+        System.out.println(file.length());
     }
 
     public static void main(String[] args) throws IOException {
@@ -23,6 +24,7 @@ public class MyFileWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        printFileSize(".notTheissBankAccount.txt");
 
     }
 }
