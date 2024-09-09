@@ -2,6 +2,11 @@
 import java.io.*;
 
 public class MyFileWriter {
+   
+    public static void printFileSize (String fileName) {
+        System.out.println(fileName.length());
+    }
+
     public static void main(String[] args) throws IOException {
         String password = "Sorry I Couldn't Find Your Bank Account Info, I Tried Mr. Theiss :()";
         String topSecretData = "I have neither given nor recieved unauthorized aid on this project. My name affirms my honor";
