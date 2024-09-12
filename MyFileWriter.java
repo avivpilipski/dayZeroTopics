@@ -26,10 +26,13 @@ public class MyFileWriter {
 
     }
     private static void printTotalFileSize(String... fileNames) {
-        int total = 0;
-        for (int i = 0; i < fileNames.length; i++){
-            total += fileNames [i].length();
+        long totalSize = 0;
+        for (String fileName : fileNames) {
+            File file = new File(fileName);
+            if (file.exists()) {
+                totalSize += file.length();
+            }
         }
-        System.out.println("This file is " + total + " bytes long.");
+        System.out.println("Total size of all files: " + totalSize + " bytes");
     }
 }
