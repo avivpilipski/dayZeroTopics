@@ -23,7 +23,7 @@ public class MyFileWriter {
             e.printStackTrace();
         }
         printFileSize(".notTheissBankAccount.txt");
-
+        printTotalFileSize("example1.txt", "example2.txt", "example3.txt");
     }
     private static void printTotalFileSize(String... fileNames) {
         int total = 0;
